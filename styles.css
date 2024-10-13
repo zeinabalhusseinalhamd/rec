@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+   font-size: 1.6rem;
+    display: grid;
+    min-height: 100vh;
+grid-template-rows: 1fr 5rem;
+align-items: center;
+justify-content: center;
+margin:8rem ;
+background-color: var(--Stone-100);
+}
+main{
+    max-width: 80rem;
+    background-color: var(--White);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: justify;
+}
+h1{
+    font-family: 'Young Serif', serif;
+    color: var(--Stone-900);
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+p{
+    padding-bottom: 2rem;
+}
+h2{
+font-family: 'Young Serif', serif;
+    color: var(--Brown-800);
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+hr{
+  margin-top: 2rem;
+}
+.img{
+    height: 35rem;
+    background: url(assets/images/image-omelette.jpeg) no-repeat center center / cover;
+    -webkit-border-radius:1.5rem ;
+    -moz-border-radius:1.5rem ;
+    -ms-border-radius:1.5rem ;
+    -o-border-radius:1.5rem ;border-radius:1.5rem ;
+}.section-1{
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+.section-2{
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+.section-1 > .img-1 ~ * {
+    margin-top: 2rem;
+  }
+  .section-2 {
+    background-color: var(--Rose-50);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .section-2 h3 {
+    color: var(--Rose-800);
+    padding-bottom: 1.5rem;
+  }
+  .section-2 ul {
+    color: var(--Rose-800);}
+    .section-2 ul li, .section-3 ul li {
+        margin-left: 2rem;
+        padding: 1rem;
+         color:  var(--Stone-600);
+      }
+      .section-3 ul {
+        padding-bottom: 0.5rem;
+      }
+      
+      .section-4 ol {
+        counter-reset: item;
+        list-style: none;
+        padding-bottom: 0.5rem;
+      }
+      .section-4 ol li {
+        counter-increment: item;
+        margin-bottom: 1.5rem;
+        padding-left: 4rem;
+        text-indent: -4rem;
+        position: relative;
+      }
+      .section-4 ol li::before {
+        content: counter(item);
+        color: var(--Brown-800);
+        font-weight: 700;
+        margin-right: 2rem;
+      }
+      .section-4 ol {
+        color: var(--Stone-600);
+      }
+      
+      .section-5 table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 4rem;
+      }
+      
+      .section-5 table tr {
+        border-bottom: 0.5px solid var(--Stone-600);
+      }
+      .section-5 table td {
+        padding: 1.5rem;
+        padding-left: 3rem;
+        text-align: left;
+      }
+      .section-5 table tr:last-child {
+        border-bottom: none;
+      }
+      .bold {
+        font-weight: 700;
+        color: var(--Brown-800);
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 0px;
+          margin: 0px;
+          background-color: var(--White);
+        }
+      
+        main {
+          width: 100%;
+          max-width: none;
+          border-radius: 0;
+          padding: 0;
+        }
+      
+        h1, p {
+          padding-left: 3rem;
+          padding-right: 3rem;
+           text-align: left;
+        }
+        h1 {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+      
+        .section-1 {
+          margin: 0px;
+        }
+        .img-1 {
+          border-radius: 0px;
+          height: 20rem;
+        }
+       hr,.section-2,
+        .section-3,
+        .section-4,
+        .section-5 {
+          margin-right: 3rem;
+          margin-left: 3rem;
+        }
+      }
